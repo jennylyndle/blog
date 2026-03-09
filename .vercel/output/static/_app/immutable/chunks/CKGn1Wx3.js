@@ -1,0 +1,1 @@
+import{b as y,d as u,T as _,U as o,h as t,C as g,P as i,m as l,f as d,n as m,i as p}from"./LN-LT7kK.js";function C(n,r){let s=null,f=t;var a;if(t){s=m;for(var e=p(document.head);e!==null&&(e.nodeType!==g||e.data!==n);)e=i(e);if(e===null)l(!1);else{var E=i(e);e.remove(),d(E)}}t||(a=document.head.appendChild(y()));try{u(()=>r(a),_|o)}finally{f&&(l(!0),d(s))}}export{C as h};
