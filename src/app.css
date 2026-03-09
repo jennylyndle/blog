@@ -1,0 +1,39 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+/* @font-face {
+	font-family: 'Google Sans Flex';
+	src: url('/fonts/GoogleSansFlex.woff2') format('woff2');
+} */
+
+@layer base {
+	:root {
+		--page-bg: white;
+		--page-text: black;
+		--page-primary: blue;
+	}
+	.dark {
+		--page-bg: black;
+		--page-text: white;
+		--page-primary: blue;
+	}
+	body,
+	html {
+		@apply h-full w-full;
+		background-color: var(--page-bg);
+		color: var(--page-text);
+		border-color: var(--page-text);
+	}
+}
+
+@theme {
+	--color-primary: var(--page-primary);
+	--color-page-bg: var(--page-bg);
+	--color-page-fg: var(--page-text);
+	/* 2. Register your font to create the .font-sans utility */
+	/* --font-sans: 'Google Sans Flex', ui-sans-serif, system-ui, sans-serif; */
+
+	/* 3. OPTIONAL: Make it the default font for the whole app */
+	/* --default-font-family: var(--font-sans); */
+}

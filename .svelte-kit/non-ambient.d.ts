@@ -27,18 +27,18 @@ export {};
 
 declare module "$app/types" {
 	export interface AppTypes {
-		RouteId(): "/" | "/demo" | "/demo/better-auth" | "/demo/better-auth/login";
+		RouteId(): "/" | "/blog" | "/blog/[id]" | "/contact";
 		RouteParams(): {
-			
+			"/blog/[id]": { id: string }
 		};
 		LayoutParams(): {
-			"/": Record<string, never>;
-			"/demo": Record<string, never>;
-			"/demo/better-auth": Record<string, never>;
-			"/demo/better-auth/login": Record<string, never>
+			"/": { id?: string };
+			"/blog": { id?: string };
+			"/blog/[id]": { id: string };
+			"/contact": Record<string, never>
 		};
-		Pathname(): "/" | "/demo" | "/demo/better-auth" | "/demo/better-auth/login";
+		Pathname(): "/" | "/blog" | `/blog/${string}` & {} | "/contact";
 		ResolvedPathname(): `${"" | `/${string}`}${ReturnType<AppTypes['Pathname']>}`;
-		Asset(): "/robots.txt" | string & {};
+		Asset(): "/fonts/GoogleSansFlex.woff2" | "/images/background-image.png" | "/images/black-theme-image.svg" | "/images/computer.png" | "/images/crypto.png" | "/images/fashion.png" | "/images/flight.png" | "/images/mars.png" | "/images/neural.png" | "/images/ocean.png" | "/images/phone.png" | "/images/vertical garden.png" | "/images/workplace.png" | "/robots.txt" | string & {};
 	}
 }
