@@ -1,7 +1,7 @@
 <script lang="ts">
 	import '../app.css';
-	import Moon from '@lucide/svelte/icons/Moon';
-	import Sun from '@lucide/svelte/icons/Sun';
+	import { Moon } from '@lucide/svelte';
+	import { Sun } from '@lucide/svelte';
 	import { page } from '$app/state';
 
 	const { children } = $props();
